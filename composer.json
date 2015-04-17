@@ -1,0 +1,30 @@
+{
+    "name":"samsonos/cms_input_datetime",
+    "description":"SamsonCMS DateTime input field module",
+    "authors":[
+        {
+            "name":"Vitaly Iegorov",
+            "email":"egorov@samsonos.com"
+        },
+        {
+            "name":"Maxim Omelchenko",
+            "email":"omelchenko@samsonos.com"
+        },
+        {
+          "name":"Pavlo Onysko",
+          "email":"onysko@samsonos.com"
+        }
+    ],
+    "require":{
+        "samsonos/cms_input":"*",
+        "samsonos/js_core":"*"
+    },
+    "license":"Open Software License (OSL) v 3.0",
+    "homepage":"http://samsonos.com/",
+    "autoload": {
+        "classmap": ["src/"],
+        "psr-0": {
+            "samsoncms\\input\\datetime": "src/"
+        }
+    }
+}

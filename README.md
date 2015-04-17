@@ -1,2 +1,6 @@
-# cms_input_datetime
-SamsonCMS input for datetime
+#DateTime input field module for SamsonCMS
+
+Generic input field with type *datetime-local* for filling SamonCMS
+entities data.
+
+(SamsonCMS official web-site)[samsoncms.com]

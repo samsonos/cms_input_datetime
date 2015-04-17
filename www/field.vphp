@@ -1,0 +1,2 @@
+<input type="datetime-local" class="__hidden" style="display:none" value="<?php iv('value')?>">
+<input type="datetime-local" class="__input" id="<?php iv('fieldId')?>" style="display:none" value="<?php iv('value')?>">
