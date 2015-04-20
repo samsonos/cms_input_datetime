@@ -32,6 +32,6 @@ class DateTime extends Field
     public function value()
     {
         // Return formatted date
-        return date('Y-m-d H:m:s', $this->dbObject[$this->param]);
+        return strftime('%Y-%m-%dT%H:%M:%S', $this->dbObject[$this->param]);
     }
 }
