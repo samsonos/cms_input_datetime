@@ -5,23 +5,18 @@
  * Date: 17.04.2015
  * Time: 12:17
  */
-
 namespace samsoncms\input\datetime;
 
-
-use samsoncms\input\Field;
-
-class DateTime extends Field
+/**
+ * SamsonCMS Date time input field
+ * @package samsoncms\input\datetime
+ */
+class Field extends samsoncms\input\Field
 {
-    /** Database object field name */
+    /** Database object value field name */
     protected $param = 'numeric_value';
 
-    /**
-     * Function to convert field value
-     *
-     * @param mixed $value
-     * @return int Time value represented as int
-     */
+    /** {@inheritdoc} */
     public function convert($value)
     {
         // Convert to timestamp
@@ -32,6 +27,6 @@ class DateTime extends Field
     public function value()
     {
         // Return formatted date
-        return strftime('%Y-%m-%dT%H:%M:%S', $this->dbObject[$this->param]);
+        return strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->dbObject[$this->param]));
     }
 }

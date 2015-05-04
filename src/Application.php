@@ -8,7 +8,10 @@
 
 namespace samsoncms\input\datetime;
 
-
+/**
+ * SamsonCMS Application for date time input field
+ * @package samsoncms\input\datetime
+ */
 class Application extends \samsoncms\input\Application
 {
     /** @var int Field type number */
