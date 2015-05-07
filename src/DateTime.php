@@ -7,11 +7,13 @@
  */
 namespace samsoncms\input\datetime;
 
+use samsoncms\input\Field;
+
 /**
  * SamsonCMS Date time input field
  * @package samsoncms\input\datetime
  */
-class Field extends samsoncms\input\Field
+class DateTime extends Field
 {
     /** Database object value field name */
     protected $param = 'numeric_value';
@@ -26,7 +28,12 @@ class Field extends samsoncms\input\Field
     /** {@inheritdoc} */
     public function value()
     {
+        $ts = $this->dbObject[$this->param];
+
         // Return formatted date
-        return strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->dbObject[$this->param]));
+        return strftime(
+            '%Y-%m-%dT%H:%M:%S',
+            ((string) (int) $ts === $ts) ? $ts : strtotime($ts)
+        );
     }
 }
